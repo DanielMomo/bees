@@ -5,4 +5,6 @@ bees frontend challenge
 
 - nextjs for routing, forms, state and context management.
 - styled components for component css handling.
-- lint for code quality.
+- eslint for code quality.
+- prettier for format
+- husky for automatic lint and format before commit

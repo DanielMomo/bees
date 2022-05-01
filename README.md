@@ -7,4 +7,3 @@ bees frontend challenge
 - styled components for component css handling.
 - eslint for code quality.
 - prettier for format
-- husky for automatic lint and format before commit

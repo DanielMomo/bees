@@ -5,6 +5,11 @@ type UserContextState = {
   setUser: Dispatch<SetStateAction<string>>
 }
 
-export const UserContext = createContext<UserContextState | undefined>(
-  undefined
+const userContextDefaultValue: UserContextState = {
+  user: '',
+  setUser: () => null
+}
+
+export const UserContext = createContext<UserContextState>(
+  userContextDefaultValue
 )

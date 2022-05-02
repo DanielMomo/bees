@@ -8,3 +8,7 @@ bees frontend challenge
 - eslint for code quality.
 - prettier for format
 - ~~recoil for store management.~~ Recoil has an issue with nextjs causing atom duplication.
+
+# running the project
+
+``` yarn start ```

@@ -11,4 +11,7 @@ bees frontend challenge
 
 # running the project
 
-``` yarn start ```
+``` 
+yarn build 
+yarn start
+```

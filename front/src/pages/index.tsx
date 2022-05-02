@@ -76,6 +76,8 @@ const App = () => {
     })
   }
 
+  const RegexValidator = '^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$'
+
   return (
     <>
       <GlobalStyle />
@@ -90,7 +92,7 @@ const App = () => {
           <NameInput
             type="text"
             placeholder="Full name"
-            onChange={e => setUser(e.target.value)}
+            onChange={e => setUser(e.target.value.replace(RegexValidator, ''))}
           />
         </Item>
         <Item>

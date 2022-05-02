@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { AgeCheckBox, EnabledDisabledButton, Logo } from 'components'
 import styled, { createGlobalStyle } from 'styled-components'
 import Router from 'next/router'
+import { UserContext } from 'contexts/UserContext'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -53,25 +54,23 @@ const Text = styled.p`
 `
 
 const App = () => {
-  const [name, setName] = useState('')
+  const { user, setUser } = useContext(UserContext)
   const [checkbox, setCheckbox] = useState(false)
   const [active, setActive] = useState(false)
 
   useEffect(() => {
-    if (name.length > 0 && checkbox === true) {
+    if (user.length > 0 && checkbox === true) {
       setActive(true)
     } else {
       setActive(false)
     }
-  }, [name, checkbox])
+  }, [user, checkbox])
 
   const checkboxHandler = () => {
     setCheckbox(!checkbox)
   }
 
   const handleClick = () => {
-    console.log(name)
-    //go to brewery page
     Router.push({
       pathname: '/brewery'
     })
@@ -91,7 +90,7 @@ const App = () => {
           <NameInput
             type="text"
             placeholder="Full name"
-            onChange={e => setName(e.target.value)}
+            onChange={e => setUser(e.target.value)}
           />
         </Item>
         <Item>

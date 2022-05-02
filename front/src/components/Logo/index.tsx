@@ -4,9 +4,9 @@ import Image from 'next/image'
 import logoImg from 'assets/images/logo.png'
 
 const LogoPosition = styled.div`
-    position: absolute;
-    bottom: 0;
-    left: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 `
 
 const LogoImg = styled(Image)``
@@ -17,4 +17,4 @@ const Logo = () => (
   </LogoPosition>
 )
 
-export default Logo;
+export default Logo

@@ -1,6 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
+type EnabledButtonProps = {
+  enabled: boolean
+  onClick: () => void
+  text: string
+}
+
 const EnabledButton = styled.button`
   background-color: #5d5fef;
   color: #ffffff;
@@ -17,7 +23,11 @@ const DisabledButton = styled.button`
   padding: 8px 16px;
 `
 
-const EnabledDisabledButton = ({ enabled, onClick, text }) => {
+const EnabledDisabledButton = ({
+  enabled,
+  onClick,
+  text
+}: EnabledButtonProps) => {
   return enabled ? (
     <EnabledButton onClick={onClick}>{text}</EnabledButton>
   ) : (

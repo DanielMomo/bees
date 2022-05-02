@@ -1,6 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
+type AgeCheckBoxProps = {
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
+  checked: boolean
+}
+
 const Container = styled.div`
   display: flex;
   flex-direction: row;
@@ -21,7 +26,7 @@ const Text = styled.label`
   color: #000000;
 `
 
-const AgeCheckBox = ({ onChange, checked }) => {
+const AgeCheckBox = ({ onChange, checked }: AgeCheckBoxProps) => {
   return (
     <Container>
       <AgeCheckBoxInput type="checkbox" onChange={onChange} checked={checked} />

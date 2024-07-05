@@ -1,5 +1,5 @@
 # bees
-bees frontend challenge
+Tech challenge for senior frontend engineer role at bees
 
 # planning
 
